@@ -9,6 +9,9 @@ app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 
+app.get("/", (_req, res) => {
+    res.send("Reached backend")
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}`)
